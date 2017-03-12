@@ -1,0 +1,82 @@
+html {
+  font-family: sans-serif;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.app {
+  position: relative;
+  height: 90%;
+  width: 100%;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.add-note {
+  padding: 2% 25px 2% 2%;
+  margin: 2% 0;
+}
+
+.add-note-content {
+  width: 70%;
+  float: left;
+}
+
+.add-note-button {
+  width: 40px;
+  float: right;
+}
+
+.notes-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 70px;
+  overflow-y: scroll;
+}
+
+.notes {
+  padding: 0 25px 0 2%;
+}
+
+.note {
+  width: 100%;
+  margin: 2% 0;
+}
+
+.note-done[checked] ~ .note-content {
+  color: silver;
+  text-decoration: line-through;
+}
+
+.note-remove {
+  float: right;
+}
+
+@media (min-width: 640px) {
+  .app {
+    width: 40%;
+    height: 80%;
+  }
+
+  .add-note-content {
+    width: 80%;
+  }
+
+  .notes {
+    padding: 0 6px 0 2%;
+  }
+
+  .github {
+    margin-left: 30%;
+  }
+}
